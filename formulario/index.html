@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    TODO
+    - Utilizar cuenta propia en formspark.io
+    - Tipos de formularios de la documentación
+    - Probar validaciones (required, maxlenght, minlenght, min, max ...)
+    - Probar patrones 
+  -->
+  <form action="https://submit-form.com/echo">
+    <input type="hidden" name="source" value="campana-instagram">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" placeholder="Ari" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="lastname">Apellidos</label>
+      <input type="text" placeholder="Gold" id="lastname" name="lastname">
+    </div>
+    <div>
+      <label for="dni">DNI:</label>
+      <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]{1}" required>
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" placeholder="" id="password" name="password" minlength="8">
+    </div>
+    <div>
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message"></textarea>
+    </div>
+    <div>
+      <input type="checkbox" name="legal" id="legal">
+      <label for="legal">He leído y acepto las condiciones legales</label>
+    </div>
+    <div>
+      <p for="">¿Cómo nos has conocido?</p>
+      <label for="meet-1">Radio</label>
+      <input type="radio" id="meet-1" name="meet" value="radio">
+      <label for="meet-2">Prensa</label>
+      <input type="radio" id="meet-2" name="meet" value="prensa">
+      <label for="meet-3">TV</label>
+      <input type="radio" id="meet-3" name="meet" value="tv">
+    </div>
+    <div>
+      <label for="option">Opciones</label>
+      <select name="option" id="option">
+        <option value="option-1">Opción 1</option>
+        <option value="option-2">Opcion 2</option>
+        <option value="option-3">Opción 3</option>
+      </select>
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
